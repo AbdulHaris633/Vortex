@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Company Employees Count</title>
+  <link rel="stylesheet" type="text/css" href="/table.css">
+</head>
+<body>
+  <h1>DASHBOARD</h1>
+  <h2>My Applied Jobs</h2>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"> 
+        <a class="nav-link" href="http://localhost:5002/jobapply">Add New</a> 
+      </li>
+    </ul>  
+  </nav>   
+   <form action="/export-to-excel" method="post">
+      <button type="submit">Export to Excel</button>
+    </form>     
+  <div class="search-container">
+   <div>
+    <input type="text" id="bd-search" placeholder="Search by BD name">
+    <button onclick="searchByBDName()">Search</button>
+   </div>
+   <div>
+    <input type="text" id="profile-search" placeholder="Search by Profile">
+    <button onclick="searchByProfile()">Search</button>
+   </div>
+   <div>
+    <input type="text" id="tech-stack-search" placeholder="Search by Tech Stack">
+    <button onclick="searchByTechStack()">Search</button>
+   </div>
+  </div>  
+
+  {{#if jobApplications.length}}
+    <table id="data-table">
+      <thead>  
+        <tr>
+          <th>Company Name</th>
+          <th>Company Type</th>     
+          <th>Job Source</th>
+          <th>Job Type</th>
+          <th>Job URL</th> 
+          <th>BD name</th>
+          <th>Applied at</th>  
+          <th>Job Title</th> 
+          <th>Tech Stack</th>
+          <th>Profile</th>    
+        </tr>
+      </thead> 
+      <tbody id="data-table-body">
+        {{#each jobApplications}}
+        <tr>
+          <td>{{this.company_name}}</td>
+          <td>{{this.company_type}}</td>
+          <td>{{this.Job_source}}</td>
+          <td>{{this.Job_type}}</td>
+          <td><a href="{{this.Job_URL}}" target="_blank">{{this.Job_URL}}</a></td> 
+          <td>{{this.BD}}</td>  
+          <td>{{this.Applied_at}}</td>
+          <td>{{this.Job_title}}</td>
+          <td>{{this.Tech_Stack}}</td>
+          <td>{{this.Profile}}</td>     
+        </tr>
+        {{/each}}   
+      </tbody>      
+    </table>
+  {{else}}
+    <p>No job applications found.</p>
+  {{/if}}
+
+  <div class="button-group">
+    <button onclick="handleStats9()">Stats9</button>
+    <button onclick="handleStats24()">Stats24</button>
+    <button onclick="handleadd()">add</button>  
+     <button onclick="handledelete()">delete</button>  
+  </div>   
+  <div class="button">
+    <button onclick="LogOUT()">Log Out</button>
+    
+  </div>
+    
+    
+   
+ 
+<script>
+  function searchByBDName() {
+    var input = document.getElementById("bd-search").value.toLowerCase();
+    var url = new URL(window.location.href);
+    url.searchParams.set("bdName", input);
+    window.location.href = url;
+  } 
+  function searchByProfile() {
+  var input = document.getElementById("profile-search").value.toLowerCase();
+  var url = new URL(window.location.href);
+  url.searchParams.set("profile", input);
+  window.location.href = url;
+}  
+
+function searchByTechStack() {
+  var input = document.getElementById("tech-stack-search").value.toLowerCase();
+  var url = new URL(window.location.href);
+  url.searchParams.set("techStack", input);
+  window.location.href = url;
+}
+  
+  window.onload = function() {
+  var url = new URL(window.location.href);
+  if (url.searchParams.has("bdName")) {
+    document.getElementById("bd-search").value = url.searchParams.get("bdName");
+  }
+  if (url.searchParams.has("profile")) {
+    document.getElementById("profile-search").value = url.searchParams.get("profile");
+  }
+  if (url.searchParams.has("techStack")) {
+    document.getElementById("tech-stack-search").value = url.searchParams.get("techStack");
+  }
+  url.searchParams.delete("bdName");
+  url.searchParams.delete("profile");
+  url.searchParams.delete("techStack");
+  window.history.replaceState({}, "", url);
+};    
+
+  function handleStats9() { 
+    // Handle the click event for the Stats9 button
+    console.log("Stats9 button clicked");
+    window.location.href = "/stats9"; 
+  }
+
+  function handleStats24() {
+    // Handle the click event for the Stats24 button
+     window.location.href = "/stats24";  
+  } 
+
+  function handleadd() {
+    // Handle the click event for the Graph button
+     window.location.href = "/adduser"; 
+  }
+   function handledelete() {
+    // Handle the click event for the Graph button
+     window.location.href = "/delete"; 
+  }
+
+  function LogOUT() {
+     window.location.href = "/login";   
+  }       
+  
+</script>  
+ 
+</body>     
+</html>  
+    
+    

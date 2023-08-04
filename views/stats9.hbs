@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats9 Page</title>
+    <link rel="stylesheet" href="/stats9.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>   
+</head>
+<body>
+    <button onclick="goTodashboard()" style="padding: 10px 20px; background-color: #007BFF; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-bottom: 20px;">Back</button>  
+     <button onclick="exportToExcel()" style="padding: 10px 20px; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-bottom: 20px;">Export to Excel</button>
+    <h1>BDs Applies from 3pm to 9pm</h1>
+    
+    <table>
+        <tr>  
+            <th>BDName</th> 
+            <th>TotalApplies</th>
+            <th>Portals_no</th>  
+            <th>Portal_names</th>
+        </tr>
+        {{#each statsData}}
+        <tr> 
+            <td>{{this.BDName}}</td>
+            <td>{{this.TotalApplies}}</td>
+            <td>{{this.Portals_no}}</td>
+            <td>{{this.Portal_name}}</td>
+        </tr> 
+        {{/each}}
+    </table>
+     <script>
+        function goTodashboard() {
+            window.location.href = "/dashboard";
+        }  
+    </script> 
+      <script>
+    function exportToExcel() {
+        // Get the table element
+        var table = document.querySelector("table");
+
+        // Create a new Excel workbook
+        var wb = XLSX.utils.table_to_book(table);
+
+        // Convert the workbook to a Blob object
+        var blob = new Blob([s2ab(XLSX.write(wb, { bookType: "xlsx", type: "binary" }))], {
+            type: "application/octet-stream"
+        });
+
+        // Create a download link and click it to start the download
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "stats.xlsx";
+        a.click();
+    }
+
+    // Function to convert data to ArrayBuffer
+    function s2ab(s) {
+        var buf = new ArrayBuffer(s.length);
+        var view = new Uint8Array(buf);
+        for (var i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff;
+        return buf;
+    }
+</script>
+
+</body> 
+</html>
+   

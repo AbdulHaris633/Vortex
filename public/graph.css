@@ -1,0 +1,53 @@
+/* line_graph.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  #lineGraph {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .apexcharts-canvas {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .apexcharts-tooltip {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px;
+  }
+  
+  .apexcharts-tooltip-title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .apexcharts-tooltip-series-group {
+    margin-top: 8px;
+  }
+  
+  .apexcharts-tooltip-marker { 
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block; 
+    margin-right: 4px;
+  }
+  
+  .apexcharts-legend {
+    margin-top: 20px;
+  }
+  
+  .apexcharts-legend-text {
+    font-size: 12px;
+  }
+   

@@ -1,0 +1,122 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("/haris.jpeg");
+  background-size: cover;
+}
+ 
+h1,
+h2 {
+  text-align: center;
+  color: #007bff;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Adjust the positioning of the "Export to Excel" button */
+nav form {
+  position: absolute;
+  top: 180px;
+  right: 10px;
+  margin-right: 10px;
+  margin-top: -10px;
+}
+
+/* Add a hover effect */
+.nav-link:hover {
+  background-color: #121213;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-right: 5px;
+  border: 1px solid #eceaea;
+  border-radius: 15px;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search-container > div {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Add some spacing between each search field and button */
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  border: 1px solid #eceaea;
+  border-radius: 15px;
+}
+
+.search-container button {
+  padding: 15px 17px; /* Increased padding for the buttons */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}   
+
+button {
+  padding: 15px 17px; /* Increased padding for the "Export to Excel" button */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 5px;  
+}
+
+#data-table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff;
+  border-left: 0px solid #e0e5e9; /* Added left border to the table */
+}
+
+#data-table th,
+#data-table td {
+  border: 3px solid #ccc; 
+  padding: 12px;
+  text-align: left;
+}
+
+#data-table th {
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#data-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.button-group {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button-group button {
+  margin-right: 10px;
+}
+
+p {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+  margin: 20px 0;
+}

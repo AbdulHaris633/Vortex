@@ -1,0 +1,372 @@
+/* Center the jumbotron */
+.jumbotron {
+  text-align: center;
+}
+
+/* Add some margin to the login link */
+.navbar-nav .nav-link {
+  margin-right: 10px;
+}
+
+/* Add a hover effect to the login link */
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}   
+
+/* Add a pulsating animation to the jumbotron title */  
+.display-4 {
+  animation: pulsate 2s infinite; 
+}   
+        
+form {  
+  width: 500px;  
+  height: 400px;  /* Increased the max-width */ 
+  margin: 0 auto;  
+  padding: 40px; /* Reduced padding for a more compact look */
+  background-color: #cce5f1; /* Lighter background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px; /* Increased border-radius for rounded corners */
+}  
+
+.form-group {
+  margin-bottom: 20px; /* Increased margin between form groups */
+}
+
+label { 
+  display: block;
+  margin-bottom: 10px; /* Reduced margin between labels */
+  font-weight: bold;
+  color: #555; /* Changed label color */
+}   
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px; /* Increased input padding for a larger input field */
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Increased border-radius for rounded corners */
+  font-size: 16px; /* Increased font size for inputs */
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 15px; /* Increased button padding */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px; /* Increased border-radius for rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+} 
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.2); 
+  }
+  100% {
+    transform: scale(1);
+  }  
+}  
+
+/* Set the background colors */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  
+  overflow: hidden; /* Hide horizontal scrollbar */  
+  background-image: linear-gradient(to bottom right, #009dff, #00ffcc);  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change the font family */
+}
+   
+
+.navbar {
+  background-color: #e9ecef;
+}
+
+.jumbotron {
+  background-color: #fff;
+}
+
+/* Add a rotating animation to a class named 'rotate' */
+.rotate {
+  animation: rotate 5s infinite;
+  transform-origin: center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add a bouncing animation to a class named 'bounce' */
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Add a fading animation to a class named 'fade' */
+.fade {
+  animation: fade 2s infinite;
+}
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Add a sliding animation to a class named 'slide' */
+.slide {
+  animation: slide 2s infinite;
+}
+
+@keyframes slide { 
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Add a pulsating color animation to a class named 'color-pulse' */
+.color-pulse {
+  animation: color-pulse 3s infinite;
+}
+
+@keyframes color-pulse {
+  0% {
+    color: #007bff;
+  }
+  50% {
+    color: #ff0066;
+  }
+  100% {
+    color: #007bff;
+  }
+}
+
+/* Add a rotating background animation to a class named 'rotate-bg' */
+.rotate-bg {
+  animation: rotate-bg 5s infinite;
+}
+
+@keyframes rotate-bg {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #ff0066;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
+/* Add more animation and design below */
+
+/* Add a bouncing animation to a class named 'bounce' */
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% { 
+    transform: translateY(-10px);
+  }
+}
+
+/* Add a pulsating background animation to a class named 'pulsate-bg' */
+.pulsate-bg {
+  animation: pulsate-bg 2s infinite;
+}
+
+@keyframes pulsate-bg {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #007bff;
+  }
+  100% {
+    background-color: #fff; 
+  }
+}
+
+/* Add a rotating text animation to a class named 'rotate-text' */ 
+.rotate-text {
+  animation: rotate-text 5s infinite;
+}
+
+@keyframes rotate-text {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add a fading border animation to a class named 'fade-border' */
+.fade-border {
+  animation: fade-border 3s infinite;
+}
+
+@keyframes fade-border {
+  0% {
+    border-color: #007bff;
+  }
+  50% {
+    border-color: #ff0066;
+  }
+  100% {
+    border-color: #007bff;
+  }
+}
+
+/* Add a scale animation to a class named 'scale' */
+.scale {
+  animation: scale 2s infinite;
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Add a bouncing arrow animation to a class named 'bounce-arrow' */
+.bounce-arrow {
+  animation: bounce-arrow 1s infinite;
+}
+
+@keyframes bounce-arrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Add a pulsating shadow animation to a class named 'pulsate-shadow' */
+.pulsate-shadow {
+  animation: pulsate-shadow 2s infinite;
+}
+
+@keyframes pulsate-shadow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Additional styles for the form */
+
+/* Style the form header */
+.form-header {
+  text-align: center;
+  font-size: 28px; /* Increased font size for the header */
+  font-weight: bold;
+  color: #007bff; /* Changed header color to match button color */
+  margin-bottom: 20px;
+}
+
+/* Style the form input fields */
+.form-input {
+  width: 100%;
+  padding: 20px; /* Increased input padding */
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Increased border-radius for rounded corners */
+  font-size: 18px; /* Increased font size for inputs */
+  color: #333; /* Changed input text color */
+}
+
+/* Style the form submit button */
+.form-submit {
+  width: 100%;
+  padding: 20px; /* Increased button padding */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px; /* Increased border-radius for rounded corners */
+  cursor: pointer;
+  font-size: 18px; /* Increased font size for the button text */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form-submit:hover {
+  background-color: #0056b3;
+}
+
+/* Style the form footer */
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Add some creativity to the form */
+
+/* Add a rotating animation to the form header */
+.form-header.rotate-text {
+  animation: rotate-text 5s infinite;
+}
+
+/* Add a pulsating color animation to the form header */
+.form-header.color-pulse {
+  animation: color-pulse 3s infinite;
+}
+
+/* Add a bouncing animation to the submit button */
+.form-submit.bounce-arrow {
+  animation: bounce-arrow 1s infinite;
+}
+
+/* Add a pulsating shadow animation to the form */
+form.pulsate-shadow {
+  animation: pulsate-shadow 2s infinite;
+}
+
+/* Add a scale animation to the form input fields */
+.form-input.scale {
+  animation: scale 2s infinite;
+}
+  
